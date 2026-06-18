@@ -3,6 +3,8 @@
 # review-merge
 > Skill for Cursor, Claude, Codex agents
 
+**Language / 언어:** [한국어](README.md) · [English](README.en.md)
+
 **PR을 한 건씩 검토하고, 매 건이 검증 게이트를 통과한 뒤에만 머지하는 human-in-the-loop 순차 리뷰 Skill입니다(REVIEW → MERGE). PR이 독립이거나 출고 전 각 건이 명시적 게이트를 통과해야 할 때, PR별 리뷰 레코드가 필요할 때, 사람이 승인마다 원격 머지하는 흐름에 씁니다. CLI를 권위 기준으로 한 검증 게이트, no-cascade push 규칙, auto-delete-head·draft PR·git push 자격 같은 스택 머지 함정의 방어를 정형화합니다. Cursor, Claude Code, Codex 모두 지원합니다.**
 
 리뷰는 본질적으로 **행위(behavior) 기반**이고, 행위는 기능별로 삽니다. PR들이 서로 독립이거나 *출고 전에 각각 게이트를 통과*해야 한다면, 묶어서 먼저 머지할 이유가 없습니다. 오히려 **한 건씩 리뷰 → 검증 게이트 → 사람이 원격 머지**하는 흐름이 리뷰 레코드와 차단 지점을 명확히 남깁니다.
